@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+/* fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.h1 {
+  color: #1f2f56;
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.43rem + 0.28vw, 1.69rem);
+  font-weight: 900;
+}
+
+.p {
+  color: #7280a7;
+  line-height: 1.7em;
+  font-size: 1em;
+}
+.p_color_dark-blue {
+  color: #1f2f56;
+}
+
+.a {
+  font-size: 0.9rem;
+}
+.a_hover_light:hover {
+  opacity: 0.5;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.page {
+  background: #e0e8ff;
+  color: #000;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+}
+.page__bg-box {
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+}
+.page__bg-img {
+  position: fixed;
+  width: 100%;
+}
+.page_margin-top {
+  margin-top: 30px;
+}
+
+.card {
+  margin: auto;
+  width: 20.94rem;
+  width: clamp(20.94rem, 19.51rem + 6.1vw, 25rem);
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  display: grid;
+  gap: 10px;
+}
+.card__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card__content {
+  padding: 20px;
+  display: grid;
+  gap: 25px;
+}
+
+.text-box {
+  text-align: center;
+  display: grid;
+  gap: 15px;
+  padding: 0 10px;
+}
+
+.plan-box {
+  display: flex;
+  align-items: center;
+  background: #f5f7ff;
+  gap: 20px;
+  padding: 15px 1.125rem;
+  padding: 15px clamp(1.13rem, 0.97rem + 0.66vw, 1.56rem);
+  border-radius: 15px;
+}
+.plan-box__plan-type {
+  flex-grow: 2;
+}
+
+.plan-type {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.buttons-box {
+  display: grid;
+  gap: 5px;
+}
+
+.order-button {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: none;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+.order-button_color_des-blue {
+  color: #7280a7;
+}
+.order-button_blue {
+  background: #3829e0;
+  color: #fff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+.order-button_center {
+  margin: auto;
+  width: max-content;
+}
+.order-button_hover_light:hover {
+  opacity: 0.5;
+}
+.order-button_hover_dark:hover {
+  color: #1f2f56;
+}
+
+.attribution {
+  text-align: center;
+  background: #111;
+  color: #fff;
+  padding: 10px;
+  margin-top: 30px;
+}
+.attribution p {
+  line-height: 22px;
+  font-size: 0.9rem;
+}
+.attribution a {
+  background: cyan;
+  padding: 10px;
+  border-radius: 6px;
+  color: black;
+  display: inline-block;
+}
+.attribution a:hover {
+  background: white;
+}
+.attribution__break {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  a {
+    margin: 5px 0;
+  }
+
+  .attribution__break {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

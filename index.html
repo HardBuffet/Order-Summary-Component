@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The challenge from the Frontend Mentor. You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!"
+    />
+    <title>Frontend Mentor | Order summary card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="page page_margin-top">
+    <picture class="page__bg-box">
+      <source
+        media="(max-width: 650px)"
+        srcset="images/pattern-background-mobile.svg"
+      />
+      <img
+        class="page__bg-img"
+        src="images/pattern-background-desktop.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </picture>
+    <header class="card">
+      <img
+        class="card__img"
+        src="images/illustration-hero.svg"
+        alt=""
+        width="450"
+        height="220"
+        aria-hidden="true"
+      />
+      <div class="card__content">
+        <div class="text-box">
+          <h1 class="h1">Order Summary</h1>
+          <p class="p">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+        </div>
+        <div class="plan-box">
+          <img src="images/icon-music.svg" alt="" />
+          <div class="plan-type plan-box__plan-type">
+            <p class="p p_color_dark-blue"><b class="fw-700">Annual Plan</b></p>
+            <p class="p">$59.99/year</p>
+          </div>
+          <a class="a a_hover_light" href="#">Change</a>
+        </div>
+        <div class="buttons-box">
+          <a
+            class="order-button order-button_blue order-button_hover_light"
+            href="#"
+            >Proceed to Payment</a
+          >
+          <button
+            class="order-button order-button_center order-button_color_des-blue order-button_hover_dark"
+          >
+            Cancel Order
+          </button>
+        </div>
+      </div>
+    </header>
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        ><br class="attribution__break" />
+        Coded by
+        <a href="https://www.frontendmentor.io/profile/HardBuffet"
+          >HardBuffet</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

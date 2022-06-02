@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="The challenge from the Frontend Mentor. You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!")
+    title Frontend Mentor | Order summary card
+    link(rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png")
+    link(rel="stylesheet" href="assets/css/styles.css")
+  body.page.page_margin-top
+    picture.page__bg-box
+      source(media="(max-width: 650px)" srcset="images/pattern-background-mobile.svg")
+      img.page__bg-img(src="images/pattern-background-desktop.svg" alt="" aria-hidden="true")
+    header.card
+      img.card__img(src="images/illustration-hero.svg" alt="" width="450" height="220" aria-hidden="true")
+      .card__content
+        .text-box
+          h1.h1 Order Summary
+          p.p You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+        .plan-box
+          img(src="images/icon-music.svg" alt="")
+          .plan-type.plan-box__plan-type
+            p.p.p_color_dark-blue
+              b.fw-700 Annual Plan
+            p.p $59.99/year
+          a(href="#").a.a_hover_light Change
+        .buttons-box
+          a(href="#").order-button.order-button_blue.order-button_hover_light Proceed to Payment
+          button.order-button.order-button_center.order-button_color_des-blue.order-button_hover_dark Cancel Order
+    footer.attribution
+          p
+            | Challenge by
+            |
+            a(href="https://www.frontendmentor.io?ref=challenge" target="_blank") Frontend Mentor
+            |
+            br.attribution__break
+            |
+            | Coded by
+            |
+            a(href="https://www.frontendmentor.io/profile/HardBuffet") HardBuffet

@@ -1,0 +1,328 @@
+// - Mobile: 375px
+// - Desktop: 1440px
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+// palette
+$white: #fff;
+$black: #000;
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+$veryPaleBlue: hsl(225, 100%, 98%);
+$desaturatedBlue: hsl(224, 23%, 55%);
+$darkBlue: hsl(223, 47%, 23%);
+
+$pageBg: $paleBlue;
+$pageColor: $black;
+$cardBg: $white;
+$orderButtonBg: $brightBlue;
+$orderButtonColor: $white;
+$orderButtonColorDesBlue: $desaturatedBlue;
+$pColor: $paleBlue;
+$pColorDarkBlue: $darkBlue;
+$planBoxBg: $veryPaleBlue;
+
+// opacity
+$aHoverLight: 0.5;
+$orderButtonHoverLight: $aHoverLight;
+$orderButtonHoverDark: $darkBlue;
+
+/* fonts */
+$mainFont: 'Red Hat Display', sans-serif;
+$fw-500: 500;
+$fw-700: 700;
+$fw-900: 900;
+
+@mixin flex(
+            $center: false,
+            $ai: false,
+            $jc: false,
+            $jcVal: center,
+            $aiVal: center
+            ) {
+  display: flex;
+
+  @if $ai {
+    align-items: $aiVal;
+  }
+
+  @if $jc {
+    justify-content: $jcVal;
+  }
+
+  @if $center {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// base
+* {
+  $marPad: 0;
+
+  margin: $marPad;
+  padding: $marPad;
+  box: {
+    sizing: border-box;
+  }
+}
+
+p {
+  font: {
+    size: 1rem;
+  }
+}
+
+.h1 {
+  color: $darkBlue;
+  font: {
+    size: 1.5rem;
+    size: clamp(1.5rem, 1.43rem + 0.28vw, 1.69rem);
+    weight: 900;
+  }
+}
+
+.p {
+  color: $desaturatedBlue;
+  line: {
+    height: 1.7em;
+  }
+  font: {
+    size: 1em;
+  }
+
+  &_color {
+    &_dark {
+      &-blue {
+        color: $pColorDarkBlue;
+      }
+    }
+  }
+}
+
+.a {
+  font: {
+    size: 0.9rem;
+  }
+  &_hover {
+    &_light {
+      &:hover {
+        opacity: $aHoverLight;
+      }
+    }
+  }
+}
+
+.fw-700 {
+  font: {
+    weight: $fw-700;
+  }
+}
+
+.page {
+  background: $pageBg;
+  color: $pageColor;
+  display: grid;
+  grid: {
+    template: {
+      rows: 1fr auto;
+    }
+  }
+  min: {
+    height: 100vh;
+  }
+  font: {
+    family: $mainFont;
+    weight: $fw-500;
+  }
+
+  &__bg {
+    &-box {
+      position: absolute;
+      z-index: -100;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__bg {
+    &-img {
+      position: fixed;
+      width: 100%;
+    }
+  }
+
+  &_margin {
+    &-top {
+      margin-top: 30px; // just for separated the card from the top of the page
+    }
+  }
+}
+
+.card {
+  margin: auto;
+  width: 20.94rem; // fallback
+  width: clamp(20.94rem, 19.51rem + 6.10vw, 25rem);
+  overflow: hidden;
+  border: {
+    radius: 20px;
+  }
+  background: $cardBg;
+  display: grid;
+  gap: 10px;
+
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__content {
+    padding: 20px;
+    display: grid;
+    gap: 25px;
+
+  }
+}
+
+.text-box {
+  text: {
+    align: center;
+  }
+  display: grid;
+  gap: 15px;
+  padding: 0 10px; // for breaking text
+}
+
+.plan-box {
+  @include flex($ai: true);
+  background: $planBoxBg;
+  gap: 20px;
+  padding: 15px 1.125rem; // fallback
+  padding: 15px clamp(1.13rem, 0.97rem + 0.66vw, 1.56rem);
+  border: {
+    radius: 15px;
+  }
+
+  &__plan {
+    &-type {
+      flex: {
+        grow: 2;
+      }
+    }
+  }
+}
+
+.plan-type {
+  font: {
+    size: 0.9rem;
+  }
+  line: {
+    height: 1.5rem;
+  }
+}
+
+.buttons-box {
+  display: grid;
+  gap: 5px;
+}
+
+.order-button {
+  padding: 15px;
+  border: none {
+    radius: 10px;
+  }
+  background: none;
+  cursor: pointer;
+  font: {
+    weight: $fw-900;
+    size: 15px;
+  }
+  text: {
+    align: center;
+    decoration: none;
+  }
+  &_color {
+    &_des {
+      &-blue {
+        color: $orderButtonColorDesBlue;
+      }
+    }
+  }
+
+  &_blue {
+    background: $orderButtonBg;
+    color: $orderButtonColor;
+    box: {
+      shadow: 0 15px 20px rgba(0,0,0,0.2);
+    }
+  }
+
+  &_center {
+    margin: auto;
+    width: max-content;
+  }
+
+  &_hover {
+    &_light {
+      &:hover {
+        opacity: $orderButtonHoverLight;
+      }
+    }
+    &_dark {
+      &:hover {
+        color: $orderButtonHoverDark;
+      }
+    }
+  }
+}
+
+// footer
+.attribution {
+  text: {
+    align: center;
+  }
+  background: #111;
+  color: #fff;
+  padding: 10px;
+  margin: {
+    top: 30px;
+  }
+
+  p {
+    line: {
+      height: 22px;
+    }
+    font: {
+      size: 0.9rem;
+    }
+  }
+
+  // mobile friendly buttons
+  // not looks good but for the challenge i think it's ok
+  a {
+    background: cyan;
+    padding: 10px;
+    border-radius: 6px;
+    color: black;
+    display: inline-block;
+    &:hover {
+      background: white;
+    }
+  }
+
+  &__break {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+   a {
+    margin: 5px 0;
+   }
+  .attribution {
+    &__break {
+      display: block;
+    }
+  }
+}
