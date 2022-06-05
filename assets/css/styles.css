@@ -28,6 +28,7 @@ p {
 
 .a {
   font-size: 0.9rem;
+  color: #1f2f56;
 }
 .a_hover_light:hover {
   opacity: 0.5;
@@ -76,7 +77,9 @@ p {
   display: block;
 }
 .card__content {
-  padding: 20px;
+  padding: 1.25rem;
+  padding: clamp(1.25rem, 0.8098591549rem + 1.8779342723vw, 2.5rem);
+  /*padding: 20px 40px;*/
   display: grid;
   gap: 25px;
 }

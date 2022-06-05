@@ -11,7 +11,7 @@ html(lang='en')
     picture.page__bg-box
       source(media="(max-width: 650px)" srcset="images/pattern-background-mobile.svg")
       img.page__bg-img(src="images/pattern-background-desktop.svg" alt="" aria-hidden="true")
-    header.card
+    main.card
       img.card__img(src="images/illustration-hero.svg" alt="" width="450" height="220" aria-hidden="true")
       .card__content
         .text-box
@@ -23,10 +23,10 @@ html(lang='en')
             p.p.p_color_dark-blue
               b.fw-700 Annual Plan
             p.p $59.99/year
-          a(href="#").a.a_hover_light Change
+          a(href="#" aria-label="Change plan.").a.a_hover_light Change
         .buttons-box
-          a(href="#").order-button.order-button_blue.order-button_hover_light Proceed to Payment
-          button.order-button.order-button_center.order-button_color_des-blue.order-button_hover_dark Cancel Order
+          a(href="#" aria-label="Proceed to Payment.").order-button.order-button_blue.order-button_hover_light Proceed to Payment
+          button.order-button.order-button_center.order-button_color_des-blue.order-button_hover_dark(aria-label="Cancel Order.") Cancel Order
     footer.attribution
           p
             | Challenge by

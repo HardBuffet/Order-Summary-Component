@@ -21,6 +21,7 @@ $orderButtonColorDesBlue: $desaturatedBlue;
 $pColor: $paleBlue;
 $pColorDarkBlue: $darkBlue;
 $planBoxBg: $veryPaleBlue;
+$aColor: $darkBlue;
 
 // opacity
 $aHoverLight: 0.5;
@@ -104,6 +105,7 @@ p {
   font: {
     size: 0.9rem;
   }
+  color: $aColor;
   &_hover {
     &_light {
       &:hover {
@@ -178,7 +180,9 @@ p {
   }
 
   &__content {
-    padding: 20px;
+    padding: 1.25rem;
+    padding: clamp(1.25rem, 0.8098591549295775rem + 1.8779342723004695vw, 2.5rem);
+    /*padding: 20px 40px;*/
     display: grid;
     gap: 25px;
 
